@@ -1,0 +1,11 @@
+.breadcrumb-me {
+  margin-bottom: 10px;
+}
+.breadcrumb-me-deactive{
+  color: gray;
+  /* color: #007bff; */
+}
+.breadcrumb-me-active{
+  color: black;
+  font-weight: bold;
+}

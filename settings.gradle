@@ -1,2 +1,0 @@
-include ':app'
-rootProject.name='Self-screening Covid-19'
