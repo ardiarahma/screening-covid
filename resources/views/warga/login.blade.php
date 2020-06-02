@@ -51,6 +51,9 @@
 	<script type="text/javascript" src="{{asset('js/core/app.js')}}"></script>
 	<script type="text/javascript" src="{{asset('js/pages/gallery.js')}}"></script>
 	<script type="text/javascript" src="{{asset('js/plugins/ui/ripple.min.js')}}"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 	<!-- /theme JS files -->
 	<script>
 	  $(document).ready(function(){
@@ -74,7 +77,7 @@
 	<!-- <div class="navbar navbar-inverse navbar-transparent " id="navbar-second"> -->
 	<nav class="navbar main-nav navbar-expand-lg py-2 fixed-top navbar-toggleable-sm affix">
 	<div class="container-fluid container-nav" id="navbar-second" >
-				<div class="navbar-collapse collapse" id="navbar-second-toggle" style="float:left;">
+				<div class="navbar-collapse collapse" id="navbar-second-toggle" style="float:right;">
 				<a class="navbar-brand" href="{{url('/')}}">
 				<img class="logo" src="{{asset('images/dpkm.png')}}" alt="logo">
 				<!-- TANGGAP COVID-19 -->
@@ -83,7 +86,7 @@
 				<ul class="nav navbar-nav visible-xs-block">
 					<li><a class="text-center collapsed" data-toggle="collapse" data-target="#navbar-second-toggle"><i class="icon-paragraph-justify3"></i></a></li>
 				</ul>
-				<div class="navbar-collapse collapse" id="navbar-second-toggle" style="float:right;">
+				<div class="navbar-collapse collapse" id="navbar-second-toggle" style="float:left;">
 					<ul class="nav navbar-nav navbar-nav-material">
 						<li><a href="{{url('/')}}">Dashboard</a></li>
 						<!-- <li><a href="{{url('/deteksi-dini')}}">Deteksi Dini</a></li>
