@@ -87,7 +87,8 @@ ul {
     padding: .5rem 1rem;
 }
 .main-nav {
-    background: linear-gradient(357.82deg, #647d8c 0%, #0e636d 100%);
+    background: #253b6e;
+    /* background: linear-gradient(357.82deg, #647d8c 0%, #0e636d 100%); */
     /* background: linear-gradient(357.82deg, #049591 0%, #6ed3cf 100%); */
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.08);
     z-index: 999;
@@ -127,7 +128,7 @@ a:hover {
 
 .nav>li>a:hover {
     text-decoration: none;
-    background-color: #0e636d;
+    background-color: #1f5f8b;
 }
 
 .link-hover a::before {
@@ -165,6 +166,12 @@ a:hover {
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%)
+}
+
+.bg-slate {
+    background-color: #1f5f8b;
+    border-color: #607D8B;
+    color: #fff;
 }
 
 /* logo */
