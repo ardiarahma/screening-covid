@@ -105,16 +105,16 @@
 			</div>
 			</nav>
 	<!-- /second navbar -->
-		<div class="page-container bg-slate">
+		<div class="page-container ">
 		<!-- Page content -->
 		<div class="page-content" >
 			<!-- Main content -->
-			<div class="content-wrapper" style="height:100px">
+			<div class="content-text-wrapper bg-slate" style="height:600px">
 				<!-- Content area -->
 				<div class="content-center text-center">
 				    <!-- <div class="panel panel-flat bg-slate"> -->
 				        <!-- <div class="panel-body text-center" style="color:white"> -->
-						<div class="col-md-12 row">
+						<div class="col-md-12 row" style="margin-left:15%; margin-bottom:110px">
 							<a class="navbar-brand" href="{{url('/')}}">
 							<img class="logo" src="{{asset('images/ugm-putih.png')}}" alt="logo">
 							</a>
@@ -130,17 +130,17 @@
 						<div class="col-md-12 row" style="margin-top:20px">
 							<div class="col-md-4">
 								<!-- <a href="{{url('deteksi-dini')}}" type="button" class="btn btn-lg btn-block btn-flat bg-slate-400 border-default">Deteksi Dini <i class="icon-circle-right2 position-right"></i></a> -->
-								<button type="button" class="btn btn-lg btn-block btn-flat bg-slate-400 border-default" data-toggle="modal" data-target="#modal_theme_primary">Deteksi Dini <i class="icon-circle-right2 position-right"></i></i></button>
+								<button type="button" class="btn btn-lg btn-block btn-flat bg-slate-400 border-default"  style="font-size:15px%" data-toggle="modal" data-target="#modal_theme_primary">Deteksi Dini <i class="icon-circle-right2 position-right"></i></i></button>
 							</div>
 										<!-- <div class="col-md-3">
 											<button type="submit" class="btn btn-lg btn-block btn-flat bg-slate-400 border-default">Skrining Dampak Ekonomi <i class="icon-circle-right2 position-right"></i></button>
 											<button type="button" class="btn btn-lg btn-block btn-flat bg-slate-400 border-default" data-toggle="modal" data-target="#modal_theme_primary">Cek Skala Kesehatan <i class="icon-circle-right2 position-right"></i></i></button>
 										</div> -->
 							<div class="col-md-4">
-								<button type="button" class="btn btn-lg btn-block btn-flat bg-slate-400 border-default" data-toggle="modal" data-target="#modal_theme_primary">Lapor Pemudik <i class="icon-circle-right2 position-right"></i></i></button>
+								<button type="button" class="btn btn-lg btn-block btn-flat bg-slate-400 border-default" style="font-size:15px%" data-toggle="modal" data-target="#modal_theme_primary">Lapor Pemudik <i class="icon-circle-right2 position-right"></i></i></button>
 							</div>
 							<div class="col-md-4">
-								<a href="{{url('info-grafik-diy')}}" type="button" class="btn btn-lg btn-block btn-flat bg-slate-400 border-default">Infografis Covid-19 <i class="icon-circle-right2 position-right"></i></a>
+								<a href="{{url('info-grafik-diy')}}" type="button" style="font-size:15px" class="btn btn-lg btn-block btn-flat bg-slate-400 border-default">Infografis Covid-19 <i class="icon-circle-right2 position-right"></i></a>
 							</div>
 						</div>
 				        <!-- </div> -->
