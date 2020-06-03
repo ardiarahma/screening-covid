@@ -77,17 +77,17 @@
 	<!-- <div class="navbar navbar-inverse navbar-transparent " id="navbar-second"> -->
 	<nav class="navbar main-nav navbar-expand-lg py-2 fixed-top navbar-toggleable-sm affix">
 	<div class="container-fluid container-nav" id="navbar-second" >
-				<div class="navbar-collapse collapse" id="navbar-second-toggle" style="float:right;">
-				<a class="navbar-brand" href="{{url('/')}}">
-				<img class="logo" src="{{asset('images/ugm-putih.png')}}" alt="logo">
-				</a>
-				<a class="navbar-brand" href="{{url('/')}}">
-				<img class="logo" src="{{asset('images/dpkm.png')}}" alt="logo">
-				</a>
-				<!-- <a class="navbar-brand" href="{{url('/')}}">
-				<img class="logo" src="{{asset('images/kkn-kokap.png')}}" alt="logo">
-				</a> -->
-				</div>
+				<!-- <div class="navbar-collapse collapse" id="navbar-second-toggle" style="float:right;">
+					<a class="navbar-brand" href="{{url('/')}}">
+					<img class="logo" src="{{asset('images/ugm-putih.png')}}" alt="logo">
+					</a>
+					<a class="navbar-brand" href="{{url('/')}}">
+					<img class="logo" src="{{asset('images/dpkm.png')}}" alt="logo">
+					</a>
+					<a class="navbar-brand" href="{{url('/')}}">
+					<img class="logo" src="{{asset('images/kkn-kokap.png')}}" alt="logo">
+					</a>
+				</div> -->
 				<ul class="nav navbar-nav visible-xs-block">
 					<li><a class="text-center collapsed" data-toggle="collapse" data-target="#navbar-second-toggle"><i class="icon-paragraph-justify3"></i></a></li>
 				</ul>
@@ -105,33 +105,44 @@
 			</div>
 			</nav>
 	<!-- /second navbar -->
-	<div class="page-container bg-slate">
+		<div class="page-container bg-slate">
 		<!-- Page content -->
-		<div class="page-content">
+		<div class="page-content" >
 			<!-- Main content -->
-			<div class="content-wrapper">
+			<div class="content-wrapper" style="height:100px">
 				<!-- Content area -->
 				<div class="content-center text-center">
 				    <!-- <div class="panel panel-flat bg-slate"> -->
 				        <!-- <div class="panel-body text-center" style="color:white"> -->
-									<h1 style="font-family:sans-serif;font-size:45px">KKN-PPM UGM KALIJERO KOKAP</h1>
-									<h3>Jangan panik! Mari bersama lawan COVID-19. Hubungi layanan Yogyakarta Tanggap COVID-19.</h3>
-									<div class="col-md-12 row" style="margin-top:20px">
-										<div class="col-md-4">
-											<!-- <a href="{{url('deteksi-dini')}}" type="button" class="btn btn-lg btn-block btn-flat bg-slate-400 border-default">Deteksi Dini <i class="icon-circle-right2 position-right"></i></a> -->
-											<button type="button" class="btn btn-lg btn-block btn-flat bg-slate-400 border-default" data-toggle="modal" data-target="#modal_theme_primary">Deteksi Dini <i class="icon-circle-right2 position-right"></i></i></button>
-										</div>
+						<div class="col-md-12 row">
+							<a class="navbar-brand" href="{{url('/')}}">
+							<img class="logo" src="{{asset('images/ugm-putih.png')}}" alt="logo">
+							</a>
+							<a class="navbar-brand" href="{{url('/')}}">
+							<img class="logo" src="{{asset('images/dpkm.png')}}" alt="logo">
+							</a>
+							<a class="navbar-brand" href="{{url('/')}}">
+							<img class="logo" src="{{asset('images/kkn-kokap.png')}}" alt="logo">
+							</a>
+						</div>
+						<h1 style="font-family:sans-serif;font-size:45px">KKN-PPM UGM KALIJERO KOKAP</h1>
+						<h3>Jangan panik! Mari bersama lawan COVID-19.</h3>
+						<div class="col-md-12 row" style="margin-top:20px">
+							<div class="col-md-4">
+								<!-- <a href="{{url('deteksi-dini')}}" type="button" class="btn btn-lg btn-block btn-flat bg-slate-400 border-default">Deteksi Dini <i class="icon-circle-right2 position-right"></i></a> -->
+								<button type="button" class="btn btn-lg btn-block btn-flat bg-slate-400 border-default" data-toggle="modal" data-target="#modal_theme_primary">Deteksi Dini <i class="icon-circle-right2 position-right"></i></i></button>
+							</div>
 										<!-- <div class="col-md-3">
 											<button type="submit" class="btn btn-lg btn-block btn-flat bg-slate-400 border-default">Skrining Dampak Ekonomi <i class="icon-circle-right2 position-right"></i></button>
 											<button type="button" class="btn btn-lg btn-block btn-flat bg-slate-400 border-default" data-toggle="modal" data-target="#modal_theme_primary">Cek Skala Kesehatan <i class="icon-circle-right2 position-right"></i></i></button>
 										</div> -->
-										<div class="col-md-4">
-											<button type="button" class="btn btn-lg btn-block btn-flat bg-slate-400 border-default" data-toggle="modal" data-target="#modal_theme_primary">Lapor Pemudik <i class="icon-circle-right2 position-right"></i></i></button>
-										</div>
-										<div class="col-md-4">
-											<a href="{{url('info-grafik-diy')}}" type="button" class="btn btn-lg btn-block btn-flat bg-slate-400 border-default">Infografis Covid-19 <i class="icon-circle-right2 position-right"></i></a>
-										</div>
-									</div>
+							<div class="col-md-4">
+								<button type="button" class="btn btn-lg btn-block btn-flat bg-slate-400 border-default" data-toggle="modal" data-target="#modal_theme_primary">Lapor Pemudik <i class="icon-circle-right2 position-right"></i></i></button>
+							</div>
+							<div class="col-md-4">
+								<a href="{{url('info-grafik-diy')}}" type="button" class="btn btn-lg btn-block btn-flat bg-slate-400 border-default">Infografis Covid-19 <i class="icon-circle-right2 position-right"></i></a>
+							</div>
+						</div>
 				        <!-- </div> -->
 				    <!-- </div> -->
 				</div>
