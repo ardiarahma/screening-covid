@@ -84,9 +84,9 @@
 				<a class="navbar-brand" href="{{url('/')}}">
 				<img class="logo" src="{{asset('images/dpkm.png')}}" alt="logo">
 				</a>
-				<!-- <a class="navbar-brand" href="{{url('/')}}">
+				<a class="navbar-brand" href="{{url('/')}}">
 				<img class="logo" src="{{asset('images/kkn-kokap.png')}}" alt="logo">
-				</a> -->
+				</a>
 				</div>
 				<ul class="nav navbar-nav visible-xs-block">
 					<li><a class="text-center collapsed" data-toggle="collapse" data-target="#navbar-second-toggle"><i class="icon-paragraph-justify3"></i></a></li>
