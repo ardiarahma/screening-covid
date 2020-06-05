@@ -43,7 +43,7 @@ $(document).ready(function(){
 			        var count = $(this).text().split('\n').length - 1;
 			        for (var i = 0; i < count; i++) {
 			          var p = $(this).html();
-			          var newP = p.replace("\n", "</p><p class='mb-4'>");
+			          var newP = p.replace("\n\n", "</p><p class='mb-4'>");
 			          $(this).html(newP);
 			        }
 			      });

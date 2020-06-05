@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Tanggap Covid 19 | KKN-PPM UGM</title>
+	<title>Kalirejo Siaga Covid 19 | KKN-PPM UGM</title>
 
 	<!-- Global stylesheets -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
@@ -88,7 +88,7 @@
 	<div class="navbar navbar-inverse bg-primary-800">
 		<div class="navbar-header" style="padding-left:25px">
 			<!-- <a href="#"><img src="{{asset('img/web_transparent_fit_ruko_logo_v2_white.png')}}" alt="" style="height:47px"></a> -->
-			<h5 style="height:20px">Tanggap Covid 19 | KKN-PPM UGM </h5>
+			<h5 style="height:20px">Kalirejo Siaga Covid 19 | KKN-PPM UGM </h5>
 			<ul class="nav navbar-nav visible-xs-block">
 				<li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
 			</ul>

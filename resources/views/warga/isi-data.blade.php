@@ -94,8 +94,8 @@
                     <div class="col-lg-9">
                         <div class="alert alert-info no-border">
                           Petunjuk pengisian <b>Status Kependudukan</b>: <br>
-                          <b>Warga Setempat</b> adalah warga Kadipaten yang benar benar tinggal di Kalirejo. <br>
-                          <b>Perantau</b> adalah warga Kadipaten yang tinggal diluar kadipaten dan melakukan mudik pada masa pendemi.
+                          <b>Warga Setempat</b> adalah warga Kalirejo yang benar benar tinggal di Kalirejo. <br>
+                          <b>Perantau</b> adalah warga Kalirejo yang tinggal diluar Kalirejo dan melakukan mudik pada masa pendemi.
                         </div>
                         @php
                           $status_kependudukan = ['Warga Setempat','Perantau'];

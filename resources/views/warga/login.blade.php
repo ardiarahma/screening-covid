@@ -94,9 +94,9 @@
 				<div class="navbar-collapse collapse" id="navbar-second-toggle" style="float:left;">
 					<ul class="nav navbar-nav navbar-nav-material">
 						<li><a href="{{url('/')}}">Dashboard</a></li>
-						<!-- <li><a href="{{url('/deteksi-dini')}}">Deteksi Dini</a></li>
-						<li><a href="{{url('/')}}">Cek Skala Kesehatan</a></li> -->
-						<li><a data-toggle="modal" data-target="#modal_theme_primary">Deteksi Dini</a></li>
+						<li><a href="{{url('/deteksi-dini')}}">Deteksi Dini</a></li>
+						<!-- <li><a href="{{url('/')}}">Cek Skala Kesehatan</a></li> -->
+						<!-- <li><a data-toggle="modal" data-target="#modal_theme_primary">Deteksi Dini</a></li> -->
 						<!-- <li><a data-toggle="modal" data-target="#modal_theme_primary">Cek Skala Kesehatan</a></li> -->
 						<li><a data-toggle="modal" data-target="#modal_theme_primary">Lapor Pemudik</a></li>
 						<li><a href="{{url('/info-grafik-diy')}}">Info Grafis</a></li>
@@ -105,16 +105,16 @@
 			</div>
 			</nav>
 	<!-- /second navbar -->
-	<div class="page-container ">
+	<div class="page-container">
 		<!-- Page content -->
 		<div class="page-content" >
 			<!-- Main content -->
-			<div class="content-text-wrapper bg-slate" style="height:500px">
+			<div class="content-text-wrapper bg-slate" style="height:620px">
 				<!-- Content area -->
 				<div class="content-center text-center">
 				    <!-- <div class="panel panel-flat bg-slate"> -->
 				        <!-- <div class="panel-body text-center" style="color:white"> -->
-						<div class="col-md-12 row" style="margin-left:15%; margin-bottom:100px; margin-top:50px">
+						<div class="col-md-12 row" style="margin-left:15%; margin-bottom:100px; margin-top:150px">
 							<a class="navbar-brand" href="{{url('/')}}">
 							<img class="logo" src="{{asset('images/ugm-putih.png')}}" alt="logo">
 							</a>
@@ -157,7 +157,7 @@
 		<div class="page-content" >
 			<!-- Main content -->
 			<!-- <a class="navbar-brand" href="{{url('/')}}"> -->
-							<img src="{{asset('images/kkn-kokap.png')}}">
+							<img src="{{asset('images/alur-pelayanan.png')}}" style="max-width:1349px">
 							<!-- </a> -->
 			<!-- /main content -->
 		</div>
@@ -219,7 +219,7 @@
 										<div class="text-center">
 											<!-- <img src="{{asset('images/covid.jfif')}}" alt="logo" style="width:50%"> -->
 											<img src="{{asset('images/blue-covid.jpg')}}" alt="logo" style="width:50%">
-											<h5 class="content-group">Tanggap COVID-19 <small class="display-block">Masukkan nomor handphone anda.</small></h5>
+											<h5 class="content-group">Kalirejo Siaga COVID-19 <small class="display-block">Masukkan nomor handphone anda.</small></h5>
 										</div>
 										<div class="form-group has-feedback has-feedback-left">
 			                <input type="text" maxlength="13" minlength="10" id="no_telephone" placeholder="Nomor Handphone" class="form-control" name="no_telepon" value="{{ old('no_telepon') }}" required autofocus>

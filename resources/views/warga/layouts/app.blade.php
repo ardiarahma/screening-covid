@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Tanggap Covid 19 | KKN-PPM UGM</title>
+	<title>Kalirejo Siaga Covid 19 | KKN-PPM UGM </title>
 
 	<!-- Global stylesheets -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
@@ -89,7 +89,7 @@
 			<!-- Page header content -->
 			<div class="page-header-content">
 				<div class="page-title">
-					<h4>KKN-PPM UGM 2020</h4>
+					<h4>KKN-PPM UGM Kalirejo Kokap 2020</h4>
 				</div>
 			</div>
 			<!-- /page header content -->
@@ -149,7 +149,7 @@
 										<div class="text-center">
 											<!-- <img src="{{asset('images/covid.jfif')}}" alt="logo" style="width:50%"> -->
 											<img src="{{asset('images/blue-covid.jpg')}}" alt="logo" style="width:50%">
-											<h5 class="content-group">Tanggap COVID-19 <small class="display-block">Masukkan nomor handphone anda.</small></h5>
+											<h5 class="content-group">Siaga COVID-19 <small class="display-block">Masukkan nomor handphone anda.</small></h5>
 										</div>
 										<div class="form-group has-feedback has-feedback-left">
 			                <input type="text" maxlength="13" minlength="10" id="no_telephone" placeholder="Nomor Handphone" class="form-control" name="no_telepon" value="{{ old('no_telepon') }}" required autofocus>

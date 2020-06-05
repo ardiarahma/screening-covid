@@ -169,30 +169,34 @@ a:hover {
 }
 
 .bg-slate {
-    background-color: #1f5f8b;
+    background-color: #3d5387;
     border-color: #607D8B;
     color: #fff;
 }
 
 /* logo */
 
-.navbar-brand {
-    float: left;
-    padding-left: 25px;
-    padding-right: 0px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    font-size: 14px;
-    line-height: 20px;
-    height: 46px;
+@media (min-width: 769px){
+    .navbar-brand {
+        float: left;
+        padding-left: 25px;
+        padding-right: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        font-size: 14px;
+        line-height: 20px;
+        height: 46px;
+    }
+    
+    .navbar-brand .logo {
+        height: 120px;
+        align-items: center;
+    }
+    
+    img {
+        vertical-align: middle;
+        border-style: none;
+        
+    }
 }
 
-.navbar-brand .logo {
-    height: 120px;
-    align-items: center;
-}
-
-img {
-    vertical-align: middle;
-    border-style: none;
-}
