@@ -290,42 +290,105 @@ class WargaController extends Controller
         $array = array_values($request->all());
 
         switch ($array) {
-          case ($array[2][0] == 'ya' && $array[2][1] == 'tidak' && $array[2][2] == 'tidak' && $array[2][3] == 'tidak' && $array[2][4] == 'tidak' && $array[2][5] == 'tidak' && $array[2][6] == 'tidak' && $array[2][7] == 'tidak' && $array[2][8] == NULL):
-            $kode = 'otg';
-            break;
-          case ($array[2][0] == 'ya' && ($array[2][1] == 'ya' || $array[2][2] == 'ya' || $array[2][3] == 'ya' || $array[2][4] == 'ya' || $array[2][8] != NULL) && $array[2][5] == 'tidak' && $array[2][6] == 'tidak' && $array[2][7] == 'tidak'):
-            $kode = 'otg';
-            break;
-          case (($array[2][0] == 'ya' || $array[2][1] == 'ya' || $array[2][2] == 'ya') && ($array[2][5] == 'ya' || $array[2][6] == 'ya') && $array[2][3] == 'tidak' && $array[2][4] == 'tidak' && $array[2][7] == 'tidak' && $array[2][8] == NULL):
-            $kode = 'odp';
-            break;
-          case ($array[2][0] == 'ya' && $array[2][1] == 'tidak' && $array[2][2] == 'tidak' && $array[2][3] == 'tidak' && $array[2][4] == 'tidak' && $array[2][5] == 'tidak' && $array[2][6] == 'ya' && $array[2][7] == 'tidak' && $array[2][8] == NULL):
-            $kode = 'odp';
-            break;
-          case ($array[2][0] == 'tidak' && $array[2][3] == 'tidak' && $array[2][4] == 'tidak' && $array[2][5] == 'ya' && $array[2][6] == 'ya' && $array[2][7] == 'ya' && $array[2][8] == NULL && ($array[2][1] == 'ya' || $array[2][2] == 'ya')):
-            $kode = 'pdp';
-            break;
-          case ($array[2][0] == 'ya' && $array[2][1] == 'tidak' && $array[2][2] == 'tidak' && $array[2][3] == 'tidak' && $array[2][4] == 'tidak' && $array[2][6] == 'tidak' && $array[2][8] == NULL && ($array[2][5] == 'ya' || $array[2][7] == 'ya')):
-            $kode = 'pdp';
-            break;
-          case ($array[2][0] == 'tidak' && $array[2][1] == 'tidak' && $array[2][2] == 'tidak' && $array[2][3] == 'tidak' && $array[2][4] == 'tidak' && $array[2][5] == 'tidak' && $array[2][6] == 'tidak' && $array[2][7] == 'ya' && $array[2][8] == NULL):
-            $kode = 'pdp';
-            break;
-          case ($array[2][0] == 'tidak' && $array[2][1] == 'tidak' && $array[2][2] == 'tidak' && $array[2][3] == 'tidak' && $array[2][4] == 'tidak' && $array[2][5] == 'tidak' && $array[2][6] == 'tidak' && $array[2][7] == 'tidak' && $array[2][8] != NULL):
-            $kode = 'imun';
-            break;
-          case ($array[2][0] == 'tidak' && $array[2][1] == 'tidak' && $array[2][2] == 'tidak' && $array[2][5] == 'tidak' && $array[2][6] == 'tidak' && $array[2][7] == 'tidak' && $array[2][8] != NULL && ($array[2][3] == 'ya' || $array[2][4] == 'ya')):
-            $kode = 'imun';
-            break;
-          case ($array[2][0] == 'tidak' && $array[2][1] == 'tidak' && $array[2][2] == 'tidak' && $array[2][3] == 'tidak' && $array[2][4] == 'tidak' && $array[2][5] == 'tidak' && $array[2][6] == 'tidak' && $array[2][7] == 'tidak' && $array[2][8] == NULL):
-            $kode = 'sehat';
-            break;
-          case ($array[2][0] == 'tidak' && $array[2][1] == 'tidak' && $array[2][2] == 'tidak' && $array[2][5] == 'tidak' && $array[2][6] == 'tidak' && $array[2][7] == 'tidak' && $array[2][8] == NULL && ($array[2][3] == 'ya' || $array[2][4] == 'ya')):
-            $kode = 'sehat';
-            break;
-          default:
-            $kode = 'belum_diketahui';
-            break;
+          case ($array[2][0] == 'tidak' && $array[2][1] == 'tidak' && $array[2][2] == 'tidak' && $array[2][3] == 'tidak' && $array[2][4] == 'tidak'):
+                    $kode = 'sehat';
+                    break;
+    /*2 */      case ($array[2][0] == 'tidak' && $array[2][1] == 'tidak' && $array[2][2] == 'tidak' && $array[2][3] == 'tidak' && $array[2][4] == 'ya'):
+                    $kode = 'wajib_lapor';
+                    break;
+    /*3 */      case ($array[2][0] == 'tidak' && $array[2][1] == 'tidak' && $array[2][2] == 'tidak' && $array[2][3] == 'ya' && $array[2][4] == 'tidak'):
+                    $kode = 'wajib_lapor';
+                    break;
+    /*4 */      case ($array[2][0] == 'tidak' && $array[2][1] == 'tidak' && $array[2][2] == 'tidak' && $array[2][3] == 'ya' && $array[2][4] == 'ya'):
+                    $kode = 'wajib_lapor';
+                    break;
+    /*5 */      case ($array[2][0] == 'tidak' && $array[2][1] == 'tidak' && $array[2][2] == 'ya' && $array[2][3] == 'tidak' && $array[2][4] == 'tidak'):
+                    $kode = 'otg';
+                    break;
+    /*6 */      case ($array[2][0] == 'tidak' && $array[2][1] == 'tidak' && $array[2][2] == 'ya' && $array[2][3] == 'tidak' && $array[2][4] == 'ya'):
+                    $kode = 'otg';
+                    break;
+    /*7 */      case ($array[2][0] == 'tidak' && $array[2][1] == 'tidak' && $array[2][2] == 'ya' && $array[2][3] == 'ya' && $array[2][4] == 'tidak'):
+                    $kode = 'otg';
+                    break;
+    /*8 */      case ($array[2][0] == 'tidak' && $array[2][1] == 'tidak' && $array[2][2] == 'ya' && $array[2][3] == 'ya' && $array[2][4] == 'ya'):
+                    $kode = 'otg';
+                    break;
+    /*9 */      case ($array[2][0] == 'tidak' && $array[2][1] == 'ya' && $array[2][2] == 'tidak' && $array[2][3] == 'tidak' && $array[2][4] == 'tidak'):
+                    $kode = 'waspada';
+                    break;
+    /*10*/      case ($array[2][0] == 'tidak' && $array[2][1] == 'ya' && $array[2][2] == 'tidak' && $array[2][3] == 'tidak' && $array[2][4] == 'ya'):
+                    $kode = 'odp';
+                    break;
+    /*11*/      case ($array[2][0] == 'tidak' && $array[2][1] == 'ya' && $array[2][2] == 'tidak' && $array[2][3] == 'ya' && $array[2][4] == 'tidak'):
+                    $kode = 'odp';
+                    break;
+    /*12*/      case ($array[2][0] == 'tidak' && $array[2][1] == 'ya' && $array[2][2] == 'tidak' && $array[2][3] == 'ya' && $array[2][4] == 'ya'):
+                    $kode = 'odp';
+                    break;
+    /*13*/      case ($array[2][0] == 'tidak' && $array[2][1] == 'ya' && $array[2][2] == 'ya' && $array[2][3] == 'tidak' && $array[2][4] == 'tidak'):
+                    $kode = 'odp';
+                    break;
+    /*14*/      case ($array[2][0] == 'tidak' && $array[2][1] == 'ya' && $array[2][2] == 'ya' && $array[2][3] == 'tidak' && $array[2][4] == 'ya'):
+                    $kode = 'odp';
+                    break;
+    /*15*/      case ($array[2][0] == 'tidak' && $array[2][1] == 'ya' && $array[2][2] == 'ya' && $array[2][3] == 'ya' && $array[2][4] == 'tidak'):
+                    $kode = 'odp';
+                    break;
+    /*16*/      case ($array[2][0] == 'tidak' && $array[2][1] == 'ya' && $array[2][2] == 'ya' && $array[2][3] == 'ya' && $array[2][4] == 'ya'):
+                    $kode = 'odp';
+                    break;
+    /*17*/      case ($array[2][0] == 'ya' && $array[2][1] == 'tidak' && $array[2][2] == 'tidak' && $array[2][3] == 'tidak' && $array[2][4] == 'tidak'):
+                    $kode = 'waspada';
+                    break;
+    /*18*/      case ($array[2][0] == 'ya' && $array[2][1] == 'tidak' && $array[2][2] == 'tidak' && $array[2][3] == 'tidak' && $array[2][4] == 'ya'):
+                    $kode = 'odp';
+                    break;
+    /*19*/      case ($array[2][0] == 'ya' && $array[2][1] == 'tidak' && $array[2][2] == 'tidak' && $array[2][3] == 'ya' && $array[2][4] == 'tidak'):
+                    $kode = 'odp';
+                    break;
+    /*20*/      case ($array[2][0] == 'ya' && $array[2][1] == 'tidak' && $array[2][2] == 'tidak' && $array[2][3] == 'ya' && $array[2][4] == 'ya'):
+                    $kode = 'odp';
+                    break;
+    /*21*/      case ($array[2][0] == 'ya' && $array[2][1] == 'tidak' && $array[2][2] == 'ya' && $array[2][3] == 'tidak' && $array[2][4] == 'tidak'):
+                    $kode = 'pdp';
+                    break;
+    /*22*/      case ($array[2][0] == 'ya' && $array[2][1] == 'tidak' && $array[2][2] == 'ya' && $array[2][3] == 'tidak' && $array[2][4] == 'ya'):
+                    $kode = 'pdp';
+                    break;
+    /*23*/      case ($array[2][0] == 'ya' && $array[2][1] == 'tidak' && $array[2][2] == 'ya' && $array[2][3] == 'ya' && $array[2][4] == 'tidak'):
+                    $kode = 'pdp';
+                    break;
+    /*24*/      case ($array[2][0] == 'ya' && $array[2][1] == 'tidak' && $array[2][2] == 'ya' && $array[2][3] == 'ya' && $array[2][4] == 'ya'):
+                    $kode = 'pdp';
+                    break;
+    /*25*/      case ($array[2][0] == 'ya' && $array[2][1] == 'ya' && $array[2][2] == 'tidak' && $array[2][3] == 'tidak' && $array[2][4] == 'tidak'):
+                    $kode = 'waspada';
+                    break;
+    /*26*/      case ($array[2][0] == 'ya' && $array[2][1] == 'ya' && $array[2][2] == 'tidak' && $array[2][3] == 'tidak' && $array[2][4] == 'ya'):
+                    $kode = 'pdp';
+                    break;
+    /*27*/      case ($array[2][0] == 'ya' && $array[2][1] == 'ya' && $array[2][2] == 'tidak' && $array[2][3] == 'ya' && $array[2][4] == 'tidak'):
+                    $kode = 'pdp';
+                    break;
+    /*28*/      case ($array[2][0] == 'ya' && $array[2][1] == 'ya' && $array[2][2] == 'tidak' && $array[2][3] == 'ya' && $array[2][4] == 'ya'):
+                    $kode = 'pdp';
+                    break;
+    /*29*/      case ($array[2][0] == 'ya' && $array[2][1] == 'ya' && $array[2][2] == 'ya' && $array[2][3] == 'tidak' && $array[2][4] == 'tidak'):
+                    $kode = 'pdp';
+                    break;
+    /*30*/      case ($array[2][0] == 'ya' && $array[2][1] == 'ya' && $array[2][2] == 'ya' && $array[2][3] == 'tidak' && $array[2][4] == 'ya'):
+                    $kode = 'pdp';
+                    break;
+    /*31*/      case ($array[2][0] == 'ya' && $array[2][1] == 'ya' && $array[2][2] == 'ya' && $array[2][3] == 'ya' && $array[2][4] == 'tidak'):
+                    $kode = 'pdp';
+                    break;
+    /*32*/      case ($array[2][0] == 'ya' && $array[2][1] == 'ya' && $array[2][2] == 'ya' && $array[2][3] == 'ya' && $array[2][4] == 'ya'):
+                    $kode = 'pdp';
+                    break;
+                default:
+                  $kode = 'belum_diketahui';
+                  break;
         }
 
          $hasil = HasilSkor::where('kategori_hasil',$kode)->first();
@@ -596,39 +659,102 @@ class WargaController extends Controller
       {
           $array = array_values($request->all());
           switch ($array) {
-            case ($array[2][0] == 'ya' && $array[2][1] == 'tidak' && $array[2][2] == 'tidak' && $array[2][3] == 'tidak' && $array[2][4] == 'tidak' && $array[2][5] == 'tidak' && $array[2][6] == 'tidak' && $array[2][7] == 'tidak' && $array[2][8] == NULL):
-              $kode = 'otg';
-              break;
-            case ($array[2][0] == 'ya' && ($array[2][1] == 'ya' || $array[2][2] == 'ya' || $array[2][3] == 'ya' || $array[2][4] == 'ya' || $array[2][8] != NULL) && $array[2][5] == 'tidak' && $array[2][6] == 'tidak' && $array[2][7] == 'tidak'):
-              $kode = 'otg';
-              break;
-            case (($array[2][0] == 'ya' || $array[2][1] == 'ya' || $array[2][2] == 'ya') && ($array[2][5] == 'ya' || $array[2][6] == 'ya') && $array[2][3] == 'tidak' && $array[2][4] == 'tidak' && $array[2][7] == 'tidak' && $array[2][8] == NULL):
-              $kode = 'odp';
-              break;
-            case ($array[2][0] == 'ya' && $array[2][1] == 'tidak' && $array[2][2] == 'tidak' && $array[2][3] == 'tidak' && $array[2][4] == 'tidak' && $array[2][5] == 'tidak' && $array[2][6] == 'ya' && $array[2][7] == 'tidak' && $array[2][8] == NULL):
-              $kode = 'odp';
-              break;
-            case ($array[2][0] == 'tidak' && $array[2][3] == 'tidak' && $array[2][4] == 'tidak' && $array[2][5] == 'ya' && $array[2][6] == 'ya' && $array[2][7] == 'ya' && $array[2][8] == NULL && ($array[2][1] == 'ya' || $array[2][2] == 'ya')):
-              $kode = 'pdp';
-              break;
-            case ($array[2][0] == 'ya' && $array[2][1] == 'tidak' && $array[2][2] == 'tidak' && $array[2][3] == 'tidak' && $array[2][4] == 'tidak' && $array[2][6] == 'tidak' && $array[2][8] == NULL && ($array[2][5] == 'ya' || $array[2][7] == 'ya')):
-              $kode = 'pdp';
-              break;
-            case ($array[2][0] == 'tidak' && $array[2][1] == 'tidak' && $array[2][2] == 'tidak' && $array[2][3] == 'tidak' && $array[2][4] == 'tidak' && $array[2][5] == 'tidak' && $array[2][6] == 'tidak' && $array[2][7] == 'ya' && $array[2][8] == NULL):
-              $kode = 'pdp';
-              break;
-            case ($array[2][0] == 'tidak' && $array[2][1] == 'tidak' && $array[2][2] == 'tidak' && $array[2][3] == 'tidak' && $array[2][4] == 'tidak' && $array[2][5] == 'tidak' && $array[2][6] == 'tidak' && $array[2][7] == 'tidak' && $array[2][8] != NULL):
-              $kode = 'imun';
-              break;
-            case ($array[2][0] == 'tidak' && $array[2][1] == 'tidak' && $array[2][2] == 'tidak' && $array[2][5] == 'tidak' && $array[2][6] == 'tidak' && $array[2][7] == 'tidak' && $array[2][8] != NULL && ($array[2][3] == 'ya' || $array[2][4] == 'ya')):
-              $kode = 'imun';
-              break;
-            case ($array[2][0] == 'tidak' && $array[2][1] == 'tidak' && $array[2][2] == 'tidak' && $array[2][3] == 'tidak' && $array[2][4] == 'tidak' && $array[2][5] == 'tidak' && $array[2][6] == 'tidak' && $array[2][7] == 'tidak' && $array[2][8] == NULL):
-              $kode = 'sehat';
-              break;
-            case ($array[2][0] == 'tidak' && $array[2][1] == 'tidak' && $array[2][2] == 'tidak' && $array[2][5] == 'tidak' && $array[2][6] == 'tidak' && $array[2][7] == 'tidak' && $array[2][8] == NULL && ($array[2][3] == 'ya' || $array[2][4] == 'ya')):
-              $kode = 'sehat';
-              break;
+/*1 */      case ($array[2][0] == 'tidak' && $array[2][1] == 'tidak' && $array[2][2] == 'tidak' && $array[2][3] == 'tidak' && $array[2][4] == 'tidak'):
+                  $kode = 'sehat';
+                break;
+/*2 */      case ($array[2][0] == 'tidak' && $array[2][1] == 'tidak' && $array[2][2] == 'tidak' && $array[2][3] == 'tidak' && $array[2][4] == 'ya'):
+                $kode = 'wajib_lapor';
+                break;
+/*3 */      case ($array[2][0] == 'tidak' && $array[2][1] == 'tidak' && $array[2][2] == 'tidak' && $array[2][3] == 'ya' && $array[2][4] == 'tidak'):
+                $kode = 'wajib_lapor';
+                break;
+/*4 */      case ($array[2][0] == 'tidak' && $array[2][1] == 'tidak' && $array[2][2] == 'tidak' && $array[2][3] == 'ya' && $array[2][4] == 'ya'):
+                $kode = 'wajib_lapor';
+                break;
+/*5 */      case ($array[2][0] == 'tidak' && $array[2][1] == 'tidak' && $array[2][2] == 'ya' && $array[2][3] == 'tidak' && $array[2][4] == 'tidak'):
+                $kode = 'otg';
+                break;
+/*6 */      case ($array[2][0] == 'tidak' && $array[2][1] == 'tidak' && $array[2][2] == 'ya' && $array[2][3] == 'tidak' && $array[2][4] == 'ya'):
+                $kode = 'otg';
+                break;
+/*7 */      case ($array[2][0] == 'tidak' && $array[2][1] == 'tidak' && $array[2][2] == 'ya' && $array[2][3] == 'ya' && $array[2][4] == 'tidak'):
+                $kode = 'otg';
+                break;
+/*8 */      case ($array[2][0] == 'tidak' && $array[2][1] == 'tidak' && $array[2][2] == 'ya' && $array[2][3] == 'ya' && $array[2][4] == 'ya'):
+                $kode = 'otg';
+                break;
+/*9 */      case ($array[2][0] == 'tidak' && $array[2][1] == 'ya' && $array[2][2] == 'tidak' && $array[2][3] == 'tidak' && $array[2][4] == 'tidak'):
+                $kode = 'waspada';
+                break;
+/*10*/      case ($array[2][0] == 'tidak' && $array[2][1] == 'ya' && $array[2][2] == 'tidak' && $array[2][3] == 'tidak' && $array[2][4] == 'ya'):
+                $kode = 'odp';
+                break;
+/*11*/      case ($array[2][0] == 'tidak' && $array[2][1] == 'ya' && $array[2][2] == 'tidak' && $array[2][3] == 'ya' && $array[2][4] == 'tidak'):
+                $kode = 'odp';
+                break;
+/*12*/      case ($array[2][0] == 'tidak' && $array[2][1] == 'ya' && $array[2][2] == 'tidak' && $array[2][3] == 'ya' && $array[2][4] == 'ya'):
+                $kode = 'odp';
+                break;
+/*13*/      case ($array[2][0] == 'tidak' && $array[2][1] == 'ya' && $array[2][2] == 'ya' && $array[2][3] == 'tidak' && $array[2][4] == 'tidak'):
+                $kode = 'odp';
+                break;
+/*14*/      case ($array[2][0] == 'tidak' && $array[2][1] == 'ya' && $array[2][2] == 'ya' && $array[2][3] == 'tidak' && $array[2][4] == 'ya'):
+                $kode = 'odp';
+                break;
+/*15*/      case ($array[2][0] == 'tidak' && $array[2][1] == 'ya' && $array[2][2] == 'ya' && $array[2][3] == 'ya' && $array[2][4] == 'tidak'):
+                $kode = 'odp';
+                break;
+/*16*/      case ($array[2][0] == 'tidak' && $array[2][1] == 'ya' && $array[2][2] == 'ya' && $array[2][3] == 'ya' && $array[2][4] == 'ya'):
+                $kode = 'odp';
+                break;
+/*17*/      case ($array[2][0] == 'ya' && $array[2][1] == 'tidak' && $array[2][2] == 'tidak' && $array[2][3] == 'tidak' && $array[2][4] == 'tidak'):
+                $kode = 'waspada';
+                break;
+/*18*/      case ($array[2][0] == 'ya' && $array[2][1] == 'tidak' && $array[2][2] == 'tidak' && $array[2][3] == 'tidak' && $array[2][4] == 'ya'):
+                $kode = 'odp';
+                break;
+/*19*/      case ($array[2][0] == 'ya' && $array[2][1] == 'tidak' && $array[2][2] == 'tidak' && $array[2][3] == 'ya' && $array[2][4] == 'tidak'):
+                $kode = 'odp';
+                break;
+/*20*/      case ($array[2][0] == 'ya' && $array[2][1] == 'tidak' && $array[2][2] == 'tidak' && $array[2][3] == 'ya' && $array[2][4] == 'ya'):
+                $kode = 'odp';
+                break;
+/*21*/      case ($array[2][0] == 'ya' && $array[2][1] == 'tidak' && $array[2][2] == 'ya' && $array[2][3] == 'tidak' && $array[2][4] == 'tidak'):
+                $kode = 'pdp';
+                break;
+/*22*/      case ($array[2][0] == 'ya' && $array[2][1] == 'tidak' && $array[2][2] == 'ya' && $array[2][3] == 'tidak' && $array[2][4] == 'ya'):
+                $kode = 'pdp';
+                break;
+/*23*/      case ($array[2][0] == 'ya' && $array[2][1] == 'tidak' && $array[2][2] == 'ya' && $array[2][3] == 'ya' && $array[2][4] == 'tidak'):
+                $kode = 'pdp';
+                break;
+/*24*/      case ($array[2][0] == 'ya' && $array[2][1] == 'tidak' && $array[2][2] == 'ya' && $array[2][3] == 'ya' && $array[2][4] == 'ya'):
+                $kode = 'pdp';
+                break;
+/*25*/      case ($array[2][0] == 'ya' && $array[2][1] == 'ya' && $array[2][2] == 'tidak' && $array[2][3] == 'tidak' && $array[2][4] == 'tidak'):
+                $kode = 'waspada';
+                break;
+/*26*/      case ($array[2][0] == 'ya' && $array[2][1] == 'ya' && $array[2][2] == 'tidak' && $array[2][3] == 'tidak' && $array[2][4] == 'ya'):
+                $kode = 'pdp';
+                break;
+/*27*/      case ($array[2][0] == 'ya' && $array[2][1] == 'ya' && $array[2][2] == 'tidak' && $array[2][3] == 'ya' && $array[2][4] == 'tidak'):
+                $kode = 'pdp';
+                break;
+/*28*/      case ($array[2][0] == 'ya' && $array[2][1] == 'ya' && $array[2][2] == 'tidak' && $array[2][3] == 'ya' && $array[2][4] == 'ya'):
+                $kode = 'pdp';
+                break;
+/*29*/      case ($array[2][0] == 'ya' && $array[2][1] == 'ya' && $array[2][2] == 'ya' && $array[2][3] == 'tidak' && $array[2][4] == 'tidak'):
+                $kode = 'pdp';
+                break;
+/*30*/      case ($array[2][0] == 'ya' && $array[2][1] == 'ya' && $array[2][2] == 'ya' && $array[2][3] == 'tidak' && $array[2][4] == 'ya'):
+                $kode = 'pdp';
+                break;
+/*31*/      case ($array[2][0] == 'ya' && $array[2][1] == 'ya' && $array[2][2] == 'ya' && $array[2][3] == 'ya' && $array[2][4] == 'tidak'):
+                $kode = 'pdp';
+                break;
+/*32*/      case ($array[2][0] == 'ya' && $array[2][1] == 'ya' && $array[2][2] == 'ya' && $array[2][3] == 'ya' && $array[2][4] == 'ya'):
+                $kode = 'pdp';
+                break;
             default:
               $kode = 'belum_diketahui';
               break;

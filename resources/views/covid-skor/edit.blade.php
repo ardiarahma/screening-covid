@@ -41,25 +41,27 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="control-label col-lg-3">Nilai Batas Bawah <span class="text-danger">*</span></label>
+                    <!-- <label class="control-label col-lg-3">Nilai Batas Bawah <span class="text-danger">*</span></label> -->
+                    <label class="control-label col-lg-3">Nilai Batas Bawah <span class="text-danger"></span></label>
                     <div class="col-lg-9">
                         <input type="number" name="nilai_batas_bawah" class="form-control" value="{{ old('nilai_batas_bawah') ? old('nilai_batas_bawah') : $data->batas_bawah }}" placeholder="">
-                        @if ($errors->has('nilai_batas_bawah'))
+                        <!-- @if ($errors->has('nilai_batas_bawah'))
                         <label style="padding-top:7px;color:#F44336;">
                         <strong><i class="fa fa-times-circle"></i> {{ $errors->first('nilai_batas_bawah') }}</strong>
                         </label>
-                        @endif
+                        @endif -->
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="control-label col-lg-3">Nilai Batas Atas <span class="text-danger">*</span></label>
+                    <!-- <label class="control-label col-lg-3">Nilai Batas Atas <span class="text-danger">*</span></label> -->
+                    <label class="control-label col-lg-3">Nilai Batas Atas <span class="text-danger"></span></label>
                     <div class="col-lg-9">
                         <input type="number" name="nilai_batas_atas" class="form-control" value="{{ old('nilai_batas_atas') ? old('nilai_batas_atas') : $data->batas_atas }}" placeholder="">
-                        @if ($errors->has('nilai_batas_atas'))
+                        <!-- @if ($errors->has('nilai_batas_atas'))
                         <label style="padding-top:7px;color:#F44336;">
                         <strong><i class="fa fa-times-circle"></i> {{ $errors->first('nilai_batas_atas') }}</strong>
                         </label>
-                        @endif
+                        @endif -->
                     </div>
                 </div>
                 <div class="form-group">

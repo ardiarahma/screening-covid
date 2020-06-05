@@ -48,13 +48,13 @@ class HasilSkorController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate(request(),
-        [
-            'hasil' => 'required',
-            'nilai_batas_bawah' => 'required|lt:nilai_batas_atas',
-            'nilai_batas_atas' => 'required|gt:nilai_batas_bawah'
-        ]
-        );
+        // $this->validate(request(),
+        // [
+        //     'hasil' => 'required',
+        //     'nilai_batas_bawah' => 'required|lt:nilai_batas_atas',
+        //     'nilai_batas_atas' => 'required|gt:nilai_batas_bawah'
+        // ]
+        // );
 
         $skor = new HasilSkor();
         $skor->kategori_screening = 'Covid';
@@ -100,13 +100,13 @@ class HasilSkorController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate(request(),
-        [
-            'hasil' => 'required',
-            'nilai_batas_bawah' => 'required|lt:nilai_batas_atas',
-            'nilai_batas_atas' => 'required|gt:nilai_batas_bawah'
-        ]
-        );
+        // $this->validate(request(),
+        // [
+        //     'hasil' => 'required',
+        //     'nilai_batas_bawah' => 'required|lt:nilai_batas_atas',
+        //     'nilai_batas_atas' => 'required|gt:nilai_batas_bawah'
+        // ]
+        // );
 
         $skor = HasilSkor::find($id);
         $skor->kategori_screening = 'Covid';

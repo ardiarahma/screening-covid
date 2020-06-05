@@ -106,7 +106,7 @@
 						<!-- <li><a href="{{url('/deteksi-dini')}}">Deteksi Dini</a></li>
 						<li><a href="{{url('/')}}">Cek Skala Kesehatan</a></li> -->
 						<li><a data-toggle="modal" data-target="#modal_theme_primary">Deteksi Dini</a></li>
-						<li><a data-toggle="modal" data-target="#modal_theme_primary">Cek Skala Kesehatan</a></li>
+						<!-- <li><a data-toggle="modal" data-target="#modal_theme_primary">Cek Skala Kesehatan</a></li> -->
 						<li><a data-toggle="modal" data-target="#modal_theme_primary">Lapor Pemudik</a></li>
 						<li><a href="{{url('/info-grafik-diy')}}">Info Grafis</a></li>
 					</ul>

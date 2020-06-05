@@ -19,6 +19,17 @@
                         @endif
                     </div>
                 </div>
+                <div class="form-group nik" id="nik">
+                    <label class="control-label col-lg-3">NIK <span class="text-danger">*</span></label>
+                    <div class="col-lg-9">
+                        <input type="number" placeholder="NIK" class="form-control" name="nik" value="{{ old('nik') }}" required maxlength="16" minlength="16" autofocus>
+                        @if ($errors->has('nik'))
+                        <label style="padding-top:7px;color:#F44336;">
+                        <strong><i class="fa fa-times-circle"></i> {{ $errors->first('nik') }}</strong>
+                        </label>
+                        @endif
+                    </div>
+                </div>
                 <div class="form-group" id="">
                     <label class="control-label col-lg-3">Tanggal Lahir <span class="text-danger">*</span></label>
                     <div class="col-lg-9">
@@ -26,9 +37,9 @@
       											<span class="input-group-addon"><i class="icon-calendar22"></i></span>
       											<input type="date" name="tanggal_lahir" class="form-control" value="" placeholder="Tanggal lahir" required autofocus>
       										</div>
-                        @if ($errors->has('tanggal_lahir'))
+                        @if ($errors->has('nik'))
                         <label style="padding-top:7px;color:#F44336;">
-                        <strong><i class="fa fa-times-circle"></i> {{ $errors->first('tanggal_lahir') }}</strong>
+                        <strong><i class="fa fa-times-circle"></i> {{ $errors->first('nik') }}</strong>
                         </label>
                         @endif
                     </div>
@@ -51,8 +62,78 @@
                     </div>
                 </div>
                 <div class="alert alert-info no-border">
-                  <span class="text-semibold"></span> RT RW berikut diisi sesuai dengan alamat tempat tinggal di kelurahan Kalirejo.
+                  <span class="text-semibold"></span> Alamat berikut diisi sesuai dengan alamat pada KTP.
         		    </div>
+                <div class="form-group">
+                    <label class="control-label col-lg-3">Provinsi <span class="text-danger">*</span></label>
+                    <div class="col-lg-9">
+                        <input type="hidden" name="provinsi" value="34" required autofocus>
+                        <select class="form-control" name="" id="provinsi" disabled>
+                            @foreach ($provinsi as $data)
+                            <option value="34" {{ ($data->id == '34') ? 'selected' : '' }}>{{$data->name}}</option>
+                            @endforeach
+                        </select>
+                        @if ($errors->has('provinsi'))
+                        <label style="padding-top:7px;color:#F44336;">
+                        <strong><i class="fa fa-times-circle"></i> {{ $errors->first('provinsi') }}</strong>
+                        </label>
+                        @endif
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-lg-3">Kota / Kabupaten <span class="text-danger">*</span></label>
+                    <div class="col-lg-9">
+                        <select class="form-control" name="kota_kabupaten" id="kabupaten" required>
+                        </select>
+                        @if ($errors->has('kota_kabupaten'))
+                        <label style="padding-top:7px;color:#F44336;">
+                        <strong><i class="fa fa-times-circle"></i> {{ $errors->first('kota_kabupaten') }}</strong>
+                        </label>
+                        @endif
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-lg-3">Kecamatan <span class="text-danger">*</span></label>
+                    <div class="col-lg-9">
+                        <select class="form-control" name="kecamatan" id="kecamatan" required>
+                        </select>
+                        @if ($errors->has('kecamatan'))
+                        <label style="padding-top:7px;color:#F44336;">
+                        <strong><i class="fa fa-times-circle"></i> {{ $errors->first('kecamatan') }}</strong>
+                        </label>
+                        @endif
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-lg-3">Kelurahan <span class="text-danger">*</span></label>
+                    <div class="col-lg-9">
+                        <select class="form-control" name="kelurahan" id="kelurahan" required>
+                        </select>
+                        @if ($errors->has('kelurahan'))
+                        <label style="padding-top:7px;color:#F44336;">
+                        <strong><i class="fa fa-times-circle"></i> {{ $errors->first('kelurahan') }}</strong>
+                        </label>
+                        @endif
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-lg-3">RW <span class="text-danger">*</span></label>
+                    <div class="col-lg-9">
+                        <select class="form-control" data-placeholder="Pilih RW" name="rw" id="rw" required>
+                            <option value="">Pilih RW</option>
+                            <optgroup label="Pilih RW">
+                              @for ($rw = 1; $rw <= 15; $rw++ )
+                              <option value="{{$rw}}" {{collect(old('rw'))->contains($rw) ? 'selected':''}}>RW {{$rw}}</option>
+                              @endfor
+                            </optgroup>
+                        </select>
+                        @if ($errors->has('rw'))
+                        <label style="padding-top:7px;color:#F44336;">
+                        <strong><i class="fa fa-times-circle"></i> {{ $errors->first('rw') }}</strong>
+                        </label>
+                        @endif
+                    </div>
+                </div>
                 <div class="form-group">
                     <label class="control-label col-lg-3">RT <span class="text-danger">*</span></label>
                     <div class="col-lg-9">
@@ -72,31 +153,8 @@
                     </div>
                 </div>
                 <div class="form-group">
-                  <label class="control-label col-lg-3">RW <span class="text-danger">*</span></label>
-                  <div class="col-lg-9">
-                    <select class="form-control" data-placeholder="Pilih RW" name="rw" id="rw" required>
-                      <option value="">Pilih RW</option>
-                      <optgroup label="Pilih RW">
-                        @for ($rw = 1; $rw <= 15; $rw++ )
-                        <option value="{{$rw}}" {{collect(old('rw'))->contains($rw) ? 'selected':''}}>RW {{$rw}}</option>
-                        @endfor
-                      </optgroup>
-                    </select>
-                    @if ($errors->has('rw'))
-                    <label style="padding-top:7px;color:#F44336;">
-                      <strong><i class="fa fa-times-circle"></i> {{ $errors->first('rw') }}</strong>
-                    </label>
-                    @endif
-                  </div>
-                </div>
-                <div class="form-group">
                     <label class="control-label col-lg-3">Status Kependudukan <span class="text-danger">*</span></label>
                     <div class="col-lg-9">
-                        <div class="alert alert-info no-border">
-                          Petunjuk pengisian <b>Status Kependudukan</b>: <br>
-                          <b>Warga Setempat</b> adalah warga Kadipaten yang benar benar tinggal di Kalirejo. <br>
-                          <b>Perantau</b> adalah warga Kadipaten yang tinggal diluar kadipaten dan melakukan mudik pada masa pendemi.
-                        </div>
                         @php
                           $status_kependudukan = ['Warga Setempat','Perantau'];
                         @endphp
@@ -117,15 +175,14 @@
                 </div>
                 <div id="div-lokasi-rantau">
                   <div class="alert alert-info no-border">
-                    Dengan memilih status kependudukan sebagai <b>Perantau</b>, maka Anda merupakan perantau yang melakukan mudik atau pulang kampung ke Kalirejo dan otomatis terdaftar pada daftar "Lapor Pemudik Kalirejo".
-                    Anda diwajibkan mengisolasi diri selama 14 hari, terhitung setelah sampai di Kalirejo.
+                    <span class="text-semibold"></span> Alamat perantau diisi sesuai dengan data lokasi rantau.
                   </div>
                   <div class="form-group" id="">
-                      <label class="control-label col-lg-3">Tanggal Pulang Kampung <span class="text-danger">*</span></label>
+                      <label class="control-label col-lg-3">Tanggal Pulang <span class="text-danger">*</span></label>
                       <div class="col-lg-9">
         										<div class="input-group">
         											<span class="input-group-addon"><i class="icon-calendar22"></i></span>
-        											<input type="date" name="tanggal_pulang" id="tanggal_pulang" class="form-control" value="" placeholder="Tanggal pulang kampung" autofocus>
+        											<input type="date" name="tanggal_pulang" id="tanggal_pulang" class="form-control" value="" placeholder="Tanggal pulang dari perantauan" autofocus>
         										</div>
                           @if ($errors->has('pulang'))
                           <label style="padding-top:7px;color:#F44336;">
@@ -134,16 +191,13 @@
                           @endif
                       </div>
                   </div>
-                  <div class="alert alert-info no-border">
-                    Alamat berikut diisi sesuai dengan data lokasi perantauan Anda.
-                  </div>
                   <div class="form-group">
                       <label class="control-label col-lg-3">Provinsi <span class="text-danger">*</span></label>
                       <div class="col-lg-9">
                           <select class="form-control" data-placeholder="Pilih Provinsi" name="provinsi_rantau" id="provinsi_rantau">
                             <option value="">Pilih Provinsi</option>
                             <optgroup label="Pilih Provinsi">
-                              @foreach (App\Models\Province::all() as $data)
+                              @foreach ($provinsi as $data)
                               <option value="{{$data->id}}">{{$data->name}}</option>
                               @endforeach
                             </optgroup>

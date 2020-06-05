@@ -105,16 +105,16 @@
 			</div>
 			</nav>
 	<!-- /second navbar -->
-		<div class="page-container ">
+	<div class="page-container ">
 		<!-- Page content -->
 		<div class="page-content" >
 			<!-- Main content -->
-			<div class="content-text-wrapper bg-slate" style="height:600px">
+			<div class="content-text-wrapper bg-slate" style="height:500px">
 				<!-- Content area -->
 				<div class="content-center text-center">
 				    <!-- <div class="panel panel-flat bg-slate"> -->
 				        <!-- <div class="panel-body text-center" style="color:white"> -->
-						<div class="col-md-12 row" style="margin-left:15%; margin-bottom:110px">
+						<div class="col-md-12 row" style="margin-left:15%; margin-bottom:100px; margin-top:50px">
 							<a class="navbar-brand" href="{{url('/')}}">
 							<img class="logo" src="{{asset('images/ugm-putih.png')}}" alt="logo">
 							</a>
@@ -125,12 +125,12 @@
 							<img class="logo" src="{{asset('images/kkn-kokap.png')}}" alt="logo">
 							</a>
 						</div>
-						<h1 style="font-family:sans-serif;font-size:45px">KKN-PPM UGM KALIJERO KOKAP</h1>
+						<h1 style="font-family:sans-serif;font-size:45px">KALIREJO KOKAP SIAGA COVID-19</h1>
 						<h3>Jangan panik! Mari bersama lawan COVID-19.</h3>
 						<div class="col-md-12 row" style="margin-top:20px">
 							<div class="col-md-4">
-								<!-- <a href="{{url('deteksi-dini')}}" type="button" class="btn btn-lg btn-block btn-flat bg-slate-400 border-default">Deteksi Dini <i class="icon-circle-right2 position-right"></i></a> -->
-								<button type="button" class="btn btn-lg btn-block btn-flat bg-slate-400 border-default"  style="font-size:15px%" data-toggle="modal" data-target="#modal_theme_primary">Deteksi Dini <i class="icon-circle-right2 position-right"></i></i></button>
+								<a href="{{url('deteksi-dini')}}" type="button" class="btn btn-lg btn-block btn-flat bg-slate-400 border-default">Deteksi Dini <i class="icon-circle-right2 position-right"></i></a>
+								<!-- <button type="button" class="btn btn-lg btn-block btn-flat bg-slate-400 border-default"  style="font-size:15px%" data-toggle="modal" data-target="#modal_theme_primary">Deteksi Dini <i class="icon-circle-right2 position-right"></i></i></button> -->
 							</div>
 										<!-- <div class="col-md-3">
 											<button type="submit" class="btn btn-lg btn-block btn-flat bg-slate-400 border-default">Skrining Dampak Ekonomi <i class="icon-circle-right2 position-right"></i></button>
@@ -148,6 +148,17 @@
 				</div>
 				<!-- /content area -->
 			</div>
+			<!-- /main content -->
+		</div>
+		<!-- /page content -->
+	</div>
+	<div class="page-container ">
+		<!-- Page content -->
+		<div class="page-content" >
+			<!-- Main content -->
+			<!-- <a class="navbar-brand" href="{{url('/')}}"> -->
+							<img src="{{asset('images/kkn-kokap.png')}}">
+							<!-- </a> -->
 			<!-- /main content -->
 		</div>
 		<!-- /page content -->
@@ -249,30 +260,7 @@
 
 		<div class="navbar-collapse collapse" id="navbar-second">
 			<div class="navbar-text">
-				&copy; 2020 | KKN PPM UGM
-				 <!-- <a href="#">Limitless Web App Kit</a> by <a href="/" target="_blank">KKN PPM UGM</a> -->
-			</div>
-
-			<div class="navbar-right">
-				<ul class="nav navbar-nav">
-					<li><a href="#">Help center</a></li>
-					<li><a href="#">Policy</a></li>
-					<li><a href="#" class="text-semibold">Upgrade your account</a></li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-							<i class="icon-cog3"></i>
-							<span class="visible-xs-inline-block position-right">Settings</span>
-							<span class="caret"></span>
-						</a>
-
-						<ul class="dropdown-menu dropdown-menu-right">
-							<li><a href="#"><i class="icon-dribbble3"></i> Dribbble</a></li>
-							<li><a href="#"><i class="icon-pinterest2"></i> Pinterest</a></li>
-							<li><a href="#"><i class="icon-github"></i> Github</a></li>
-							<li><a href="#"><i class="icon-stackoverflow"></i> Stack Overflow</a></li>
-						</ul>
-					</li>
-				</ul>
+				&copy; 2020 | KKN-PPM UGM KALIREJO KOKAP
 			</div>
 		</div>
 	</div>

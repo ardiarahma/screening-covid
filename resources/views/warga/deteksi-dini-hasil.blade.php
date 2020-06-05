@@ -20,8 +20,10 @@
                     <?php if ($hasil->gambar): ?>
                       <img src='{{$gambar}}' alt="" style="width:150px"><br>
                     <?php endif; ?>
-                    <h4 style="font-family:sans-serif;">Selanjutnya, yang harus Anda lakukan adalah: <br>
-                    {{$hasil->tatalaksana}}</h4>
+                    <h4 style="font-family:sans-serif;">Selanjutnya, yang harus Anda lakukan adalah: 
+                    <br>
+                    <p class="enter-to-p">
+                    {{$hasil->tatalaksana}}</p></h4>
 
                   </div>
                   <div class="col-md-12" style="margin-bottom:10px">
@@ -35,4 +37,16 @@
 <!-- /content area -->
 @endsection
 @push('after_script')
+<script>
+$(document).ready(function(){
+			$(".enter-to-p").each(function(){
+			        var count = $(this).text().split('\n').length - 1;
+			        for (var i = 0; i < count; i++) {
+			          var p = $(this).html();
+			          var newP = p.replace("\n", "</p><p class='mb-4'>");
+			          $(this).html(newP);
+			        }
+			      });
+					});
+</script>
 @endpush
