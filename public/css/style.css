@@ -168,10 +168,27 @@ a:hover {
     transform: translate(-50%, -50%)
 }
 
+.logo-container{
+    margin-left:16%; margin-bottom:100px; margin-top:150px;
+}
+
 .bg-slate {
     background-color: #3d5387;
     border-color: #607D8B;
     color: #fff;
+}
+
+
+
+/*image-pelayanan*/
+
+.image-container{
+    text-align: center;
+}
+
+.image-container-pelayanan{
+    max-width: 100%;
+    align-items: center;
 }
 
 /* logo */
@@ -198,5 +215,56 @@ a:hover {
         border-style: none;
         
     }
+}
+
+/* Media Queries */
+@media screen and (max-width: 1200px){
+
+}
+
+@media screen and (max-width: 900px){
+    .logo-container{
+        margin-left:25%; margin-bottom:60px; margin-top:55px;
+    }
+
+    .navbar-brand .logo {
+        height: 70px;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .logo-container{
+        margin-left:25%; margin-bottom:60px; margin-top:55px;
+    }
+
+    .navbar-brand .logo {
+        height: 70px;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .logo-container{
+        margin-left:15%; margin-bottom:60px; margin-top:55px;
+    }
+
+    .navbar-brand .logo {
+        height: 70px;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 480px){
+
+    .logo-container{
+        margin-left:9%; margin-bottom:60px; margin-top:55px;
+    }
+
+    .navbar-brand .logo {
+        height: 70px;
+        align-items: center;
+    }
+
 }
 
