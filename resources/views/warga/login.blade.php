@@ -105,16 +105,16 @@
 			</div>
 			</nav>
 	<!-- /second navbar -->
-	<div class="page-container">
+	<div class="page-container bg-slate">
 		<!-- Page content -->
-		<div class="page-content" >
+		<div class="page-content " >
 			<!-- Main content -->
-			<div class="content-text-wrapper bg-slate" style="height:620px">
+			<div class="content-text-wrapper" style="">
 				<!-- Content area -->
 				<div class="content-center text-center">
 				    <!-- <div class="panel panel-flat bg-slate"> -->
 				        <!-- <div class="panel-body text-center" style="color:white"> -->
-						<div class="col-md-12 row" style="margin-left:15%; margin-bottom:100px; margin-top:150px">
+						<div class="col-md-12 row logo-container" style="">
 							<a class="navbar-brand" href="{{url('/')}}">
 							<img class="logo" src="{{asset('images/ugm-putih.png')}}" alt="logo">
 							</a>
@@ -152,12 +152,14 @@
 		</div>
 		<!-- /page content -->
 	</div>
-	<div class="page-container ">
+	<div class="page-container style-image">
 		<!-- Page content -->
 		<div class="page-content" >
 			<!-- Main content -->
 			<!-- <a class="navbar-brand" href="{{url('/')}}"> -->
-							<img src="{{asset('images/alur-pelayanan.png')}}" style="max-width:1349px">
+				<div class="image-container">
+					<img class="image-container-pelayanan" src="{{asset('images/alur-pelayanan.png')}}">
+				</div>
 							<!-- </a> -->
 			<!-- /main content -->
 		</div>
