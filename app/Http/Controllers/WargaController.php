@@ -202,13 +202,8 @@ class WargaController extends Controller
       $this->validate(request(),
       [
           'nama' => 'required',
-          'nik' => 'required|digits:16',
           'tanggal_lahir' => 'required',
           'jenis_kelamin' => 'required',
-          'provinsi' => 'required',
-          'kota_kabupaten' => 'required',
-          'kecamatan' => 'required',
-          'kelurahan' => 'required',
           'rw' => 'required',
           'rt' => 'required',
           'status_kependudukan' => 'required',
